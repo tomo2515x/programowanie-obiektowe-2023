@@ -6,6 +6,5 @@ from uuid import UUID
 @dataclass
 class Charger:
     max_current_kw: float
-    total_charged_kw: float
-    attached_car_vin: UUID
-    status: ChargerStatus
+    status: ChargerStatus = ChargerStatus.FREE
+    total_charged_kw: float = 0.0

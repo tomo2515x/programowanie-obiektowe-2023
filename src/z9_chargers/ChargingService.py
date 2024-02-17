@@ -1,13 +1,14 @@
 from Car import Car
 from Charger import Charger
-from uuid import uuid4
+from uuid import uuid4, UUID
+from dataclasses import dataclass
 
 
+@dataclass
 class ClientAccount:
-    def __init__(self, id, name, funds):
-        self.id = id
-        self.name = name
-        self.funds = funds
+    id: UUID
+    name: str
+    funds: int
 
     def get_funds(self):
         return self.funds

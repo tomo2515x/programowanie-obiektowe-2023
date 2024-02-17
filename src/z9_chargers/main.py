@@ -3,8 +3,8 @@ from ChargingService import ChargingService, ClientAccount
 from Car import Car
 
 
-chargers = [Charger(), Charger()]
-service = ChargingService()
+chargers = [Charger(max_current_kw=10.0), Charger(max_current_kw=15.0)]
+service = ChargingService(chargers=chargers)
 
 client_account = ClientAccount()
 car = Car()
