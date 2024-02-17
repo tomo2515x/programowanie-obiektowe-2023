@@ -34,7 +34,7 @@ class ChargingService:
         self, account: ClientAccount, car: Car, how_much: int, charger_position: int
     ):
         print(
-            f"Charging on account ({account.id}), car id ({car.id}), will change {how_much}kWh on position {charger_position}"
+            f"Charging on account ({account.id}), car id ({car.vin}), will change {how_much}kWh on position {charger_position}"
         )
 
     def stop_charging(self, car):
