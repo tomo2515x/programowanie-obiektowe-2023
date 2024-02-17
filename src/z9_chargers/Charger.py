@@ -1,3 +1,11 @@
+from dataclasses import dataclass
+from ChargerStatus import ChargerStatus
+from uuid import UUID
+
+
+@dataclass
 class Charger:
-    def __init__(self) -> None:
-        pass
+    max_current_kw: float
+    total_charged_kw: float
+    attached_car_vin: UUID
+    status: ChargerStatus

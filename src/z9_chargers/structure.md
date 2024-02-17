@@ -1,6 +1,5 @@
 # Charging station backend server
 
-
 ```
 Model:
 
@@ -32,7 +31,7 @@ ChargingService
  - start_charging(client_id, vin, kwh, desired_current_kw, charger_position: int)
    # check if charger available and supports such desired_current
 
- - stop_charging(client_id, vin)   
+ - stop_charging(client_id, vin)
  - attach_charger(charger)
  - disable_charger(charger_position:int)
  - engable_charger(charger_position:int)
@@ -41,7 +40,7 @@ ChargingService
 Charger
  - max_current_kw
  - total_charged_kw
- - attached_car_vin 
+ - attached_car_vin
  - status
 
 ChargerStatus
