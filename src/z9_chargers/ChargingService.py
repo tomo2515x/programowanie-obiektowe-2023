@@ -27,7 +27,24 @@ class ChargingService:
         self.chargers = chargers
         self.time_modifier = time_modifier
 
-    def start_charging(client_id, vim, kwh, desired_current_kw, charger_position: int):
-            #start charging session, check current, adjust if needed
+    def start_charging(self, client_id, vin, kwh, desired_current_kw, charger_position: int):
+        #start charging session, check current, adjust if needed
         
 
+    def stop_charging(self, client_id, vin):
+        #
+
+
+    def attach_charger(charger):
+        #shouldit be called after or before starting???
+
+    def remove_charger(charger):
+        #unplug :3
+
+    def disable_charger(charger_position:int):
+        #disables charger??/ like when and why? powersaving lmao
+
+    def enable_charger(charger_position:int):
+        #does the same but opposite
+
+    
