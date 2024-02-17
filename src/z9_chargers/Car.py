@@ -4,6 +4,6 @@ from dataclasses import dataclass
 
 @dataclass
 class Car:
-    vin: UUID = uuid4()
     max_current_kw: float
+    vin: UUID = uuid4()
     total_charged_kwh: float = 0.0
