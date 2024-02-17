@@ -6,9 +6,9 @@ from dataclasses import dataclass
 
 @dataclass
 class ClientAccount:
-    id: UUID
     name: str
     funds: int
+    id: UUID = uuid4()
 
     def get_funds(self):
         return self.funds
@@ -31,12 +31,13 @@ class ChargingService:
         self.time_modifier = time_modifier
 
     def start_charging(
-        self, client_id, vin, kwh, desired_current_kw, charger_position: int
+        self, account: ClientAccount, car: Car, how_much: int, charger_position: int
     ):
-        # start charging session, check current, adjust if needed
-        pass
+        print(
+            f"Charging on account ({account.id}), car id ({car.id}), will change {how_much}kWh on position {charger_position}"
+        )
 
-    def stop_charging(self, client_id, vin):
+    def stop_charging(self, car):
         # stop it, yank the cable
         pass
 
