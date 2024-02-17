@@ -29,22 +29,23 @@ class ChargingService:
 
     def start_charging(self, client_id, vin, kwh, desired_current_kw, charger_position: int):
         #start charging session, check current, adjust if needed
+        pass
         
 
     def stop_charging(self, client_id, vin):
-        #
-
+        #stop it, yank the cable
+        pass
 
     def attach_charger(charger):
         #shouldit be called after or before starting???
-
+        pass
     def remove_charger(charger):
         #unplug :3
-
+        pass
     def disable_charger(charger_position:int):
         #disables charger??/ like when and why? powersaving lmao
-
+        pass
     def enable_charger(charger_position:int):
         #does the same but opposite
-
+        pass
     
